@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  namespace: webapps
+  namespace: argocd
   name: netflix-app
   labels:
     app: netflix-app
@@ -17,7 +17,7 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  namespace: webapps
+  namespace: argocd
   name: ingress-netflix
   annotations:
     alb.ingress.kubernetes.io/scheme: internet-facing
